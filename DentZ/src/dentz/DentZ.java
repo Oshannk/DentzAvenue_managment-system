@@ -16,8 +16,8 @@ public class DentZ {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        #test 001
+        System.out.println("Test 001");
+//        #test 001
     }
     
 }

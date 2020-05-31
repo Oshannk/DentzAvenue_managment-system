@@ -5,6 +5,8 @@
  */
 package dentz_avenue;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author SHA
@@ -16,6 +18,9 @@ public class Dentz_Avenue {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        System.out.println("Test 001 Iran");
+        
     }
     
 }

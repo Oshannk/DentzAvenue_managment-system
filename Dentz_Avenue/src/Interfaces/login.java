@@ -1,5 +1,8 @@
 package Interfaces;
 
+import java.awt.Frame;
+import javax.swing.JFrame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,8 @@ public class login extends javax.swing.JFrame {
     /**
      * Creates new form login
      */
+    int xMouse;
+    int yMouse;
     public login() {
         initComponents();
     }
@@ -28,35 +33,103 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgPanel = new javax.swing.JPanel();
         txtUser = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
+        btnClose = new javax.swing.JLabel();
+        btnMinimize = new javax.swing.JLabel();
+        MoveBar = new javax.swing.JLabel();
         bgLoginLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setName("Login"); // NOI18N
+        setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        bgPanel.setBackground(new java.awt.Color(49, 49, 49));
+        bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         txtUser.setBorder(null);
-        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 193, 210, 28));
+        bgPanel.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, 210, 28));
 
         txtPass.setBorder(null);
-        getContentPane().add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 277, 210, 28));
+        txtPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassActionPerformed(evt);
+            }
+        });
+        bgPanel.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 210, 28));
 
         btnLogin.setBackground(new java.awt.Color(162, 162, 162));
         btnLogin.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
         btnLogin.setText("LOGIN");
         btnLogin.setBorder(null);
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 350, 240, 50));
+        bgPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 240, 50));
+
+        btnClose.setIcon(new javax.swing.ImageIcon("C:\\Users\\MaC\\Downloads\\icons8-close-window-27.png")); // NOI18N
+        btnClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCloseMouseClicked(evt);
+            }
+        });
+        bgPanel.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(838, 2, -1, -1));
+
+        btnMinimize.setIcon(new javax.swing.ImageIcon("C:\\Users\\MaC\\Downloads\\icons8-minimize-window-27.png")); // NOI18N
+        btnMinimize.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMinimizeMouseClicked(evt);
+            }
+        });
+        bgPanel.add(btnMinimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(808, 2, -1, -1));
+
+        MoveBar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                MoveBarMouseDragged(evt);
+            }
+        });
+        MoveBar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MoveBarMousePressed(evt);
+            }
+        });
+        bgPanel.add(MoveBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 30));
 
         bgLoginLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
-        getContentPane().add(bgLoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bgPanel.add(bgLoginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 34, -1, 500));
+
+        getContentPane().add(bgPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 540));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPassActionPerformed
+
+    private void MoveBarMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoveBarMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_MoveBarMouseDragged
+
+    private void MoveBarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MoveBarMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_MoveBarMousePressed
+
+    private void btnCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCloseMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btnCloseMouseClicked
+
+    private void btnMinimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMinimizeMouseClicked
+       //login log = new login();
+       this.setState(Frame.ICONIFIED);
+    }//GEN-LAST:event_btnMinimizeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -94,8 +167,12 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel MoveBar;
     private javax.swing.JLabel bgLoginLabel;
+    private javax.swing.JPanel bgPanel;
+    private javax.swing.JLabel btnClose;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JLabel btnMinimize;
     private javax.swing.JPasswordField txtPass;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables

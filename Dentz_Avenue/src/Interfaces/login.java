@@ -36,7 +36,7 @@ public class login extends javax.swing.JFrame {
         bgPanel = new javax.swing.JPanel();
         txtUser = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
-        btnLogin = new javax.swing.JButton();
+        kButton1 = new keeptoo.KButton();
         btnClose = new javax.swing.JLabel();
         btnMinimize = new javax.swing.JLabel();
         MoveBar = new javax.swing.JLabel();
@@ -63,13 +63,20 @@ public class login extends javax.swing.JFrame {
         });
         bgPanel.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 210, 28));
 
-        btnLogin.setBackground(new java.awt.Color(162, 162, 162));
-        btnLogin.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 24)); // NOI18N
-        btnLogin.setText("LOGIN");
-        btnLogin.setBorder(null);
-        bgPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 240, 50));
+        kButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/loginBtn.png"))); // NOI18N
+        kButton1.setText("LOGIN");
+        kButton1.setToolTipText("");
+        kButton1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 24)); // NOI18N
+        kButton1.setIconTextGap(1);
+        kButton1.setkAllowGradient(false);
+        kButton1.setkBackGroundColor(new java.awt.Color(0, 172, 212));
+        kButton1.setkBorderRadius(50);
+        kButton1.setkHoverColor(new java.awt.Color(0, 113, 168));
+        kButton1.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        kButton1.setkHoverStartColor(new java.awt.Color(0, 0, 0));
+        bgPanel.add(kButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, 230, 50));
 
-        btnClose.setIcon(new javax.swing.ImageIcon("C:\\Users\\MaC\\Downloads\\icons8-close-window-27.png")); // NOI18N
+        btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnClose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnCloseMouseClicked(evt);
@@ -77,7 +84,7 @@ public class login extends javax.swing.JFrame {
         });
         bgPanel.add(btnClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(838, 2, -1, -1));
 
-        btnMinimize.setIcon(new javax.swing.ImageIcon("C:\\Users\\MaC\\Downloads\\icons8-minimize-window-27.png")); // NOI18N
+        btnMinimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/mini.png"))); // NOI18N
         btnMinimize.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnMinimizeMouseClicked(evt);
@@ -171,8 +178,8 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel bgLoginLabel;
     private javax.swing.JPanel bgPanel;
     private javax.swing.JLabel btnClose;
-    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel btnMinimize;
+    private keeptoo.KButton kButton1;
     private javax.swing.JPasswordField txtPass;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables

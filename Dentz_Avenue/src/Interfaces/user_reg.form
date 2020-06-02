@@ -170,7 +170,6 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jDateChooser1" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
                                       <Component id="txt_urname6" alignment="0" min="-2" pref="338" max="-2" attributes="0"/>
                                       <Component id="txt_urname7" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                                   </Group>
@@ -210,6 +209,10 @@
                                       </Group>
                                   </Group>
                                   <EmptySpace min="0" pref="58" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jDateChooser1" min="-2" pref="148" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>

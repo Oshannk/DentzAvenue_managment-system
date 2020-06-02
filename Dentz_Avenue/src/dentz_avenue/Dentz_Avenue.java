@@ -5,9 +5,6 @@
  */
 package dentz_avenue;
 
-import Interfaces.user_reg;
-import java.awt.BorderLayout;
-
 /**
  *
  * @author SHA
@@ -20,8 +17,6 @@ public class Dentz_Avenue {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        System.out.println("Test 001 Iran");
-        user_reg ur = new user_reg();
-        ur.setVisible(true);
+        
     }
 }

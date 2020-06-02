@@ -348,8 +348,6 @@ public class user_reg extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel16.setText("Password: ");
 
-        jPasswordField1.setText("passwod");
-
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel17.setText("Job role: ");
 
